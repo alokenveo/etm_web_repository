@@ -9,7 +9,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 5px 20px;
     background-color: #f3f3f3;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -23,11 +23,9 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-.header-contenedor-principal h1{
-    margin: 0;
-}
 
 .logo-pagina{
     display: flex;
@@ -36,19 +34,90 @@ a{
 
 
 .logo-pagina h1 {
+    margin-top: 15px;
     margin-right: 10px; /* Ajusta el espacio entre el h1 y la imagen según sea necesario */
+    font-size: 25px;
 }
 
 .logo-pagina img {
-    max-height: 50px; /* Ajusta la altura de la imagen según sea necesario */
+    max-height: 60px; /* Ajusta la altura de la imagen según sea necesario */
+}
+
+.searcher{
+    height: 20px;
+    width: 600px;
+    align-items: center;
+}
+
+.searcher-content{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.block-searcher {
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #fff;
+
+    width: 100%;
+    max-width: 100%; /* Ajusta el ancho máximo según sea necesario */
+    height: 100%; /* Ajusta la altura según sea necesario */
+    overflow: hidden;
+    align-items: center;
+}
+.block-searcher input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    height: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.block-searcher button {
+    padding: 0px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
 }
 
 
+.rigthHeader{
+    display: flex;
+    align-items: center;
+    
+}
 
+.iconos-header{
+    margin-left: 10px;
+}
 
-.searcher input {
-    padding: 5px;
-    font-size: 16px;
+.iconos-header:hover{
+    cursor: pointer;
+}
+
+.iconos-rigth-header {
+    width: 20px; /* Ajusta el tamaño según sea necesario */
+    height: 20px; /* Ajusta el tamaño según sea necesario */
+    stroke: currentColor; /* Usa el color actual del texto */
+    fill: none; /* Asegúrate de que el relleno esté configurado correctamente */
+    padding: 10px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #333;
 }
 
 nav ul {
@@ -65,20 +134,6 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
-}
-
-.rigthHeader{
-    display: flex;
-    align-items: center;
-    
-}
-
-.iconos-rigth-header {
-    width: 24px; /* Ajusta el tamaño según sea necesario */
-    height: 24px; /* Ajusta el tamaño según sea necesario */
-    stroke: currentColor; /* Usa el color actual del texto */
-    fill: none; /* Asegúrate de que el relleno esté configurado correctamente */
-    padding: 10px;
 }
 
 .content {
@@ -112,6 +167,12 @@ nav ul li a {
     width: 23%;
     margin-bottom: 20px;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.producto:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .producto img {
@@ -134,5 +195,44 @@ button {
     background-color: #333;
     color: white;
     border: none;
+    cursor: pointer;
+}
+
+
+/* Estilos para la ventana emergente */
+.ventana-emergente {
+    display: none; /* Oculta la ventana por defecto */
+    position: fixed; /* Fija la ventana en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Habilita el scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.ventana-emergente-contenido {
+    background-color: #fff;
+    margin: 15% auto; /* Centra la ventana */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    max-width: 600px; /* Ancho máximo */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Móviles</title>
+    <title>Tienda ETM</title>
     <link rel="stylesheet" href="/css/estilos.css">
 </head>
 
@@ -14,24 +14,26 @@
             <div class="leftHeader">
                 <a href="/inicio.html" class="logo-pagina">
                     <img src="img/logo gpt sin fondo.jpg.png" alt="">
-                    <h1>Miravia</h1>
+                    <h1>ExtremaduraTechMarket</h1>
                 </a>
             </div>
             <div class="searcher">
                 <div class="searcher-content">
-                    <input type="text" placeholder="Buscar productos">
-                    <button>Buscar</button>
+                    <div class="block-searcher">
+                        <input type="text" placeholder="Buscar productos">
+                        <button>Buscar</button>
+                    </div>
                 </div>
             </div>
             <div class="rigthHeader">
-                <div class="bolsa-compras">
+                <div id="bolsa-compras" class="iconos-header">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="iconos-rigth-header">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                     </svg>
                 </div>
-                <div class="user">
+                <div id="user" class="iconos-header">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="iconos-rigth-header">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -43,13 +45,13 @@
         <div class="header-contener-secundario">
             <nav>
                 <ul>
-                    <li><a href="#">Moda mujer</a></li>
-                    <li><a href="#">Belleza y salud</a></li>
-                    <li><a href="#">Hogar y jardín</a></li>
-                    <li><a href="#">Moda hombre</a></li>
-                    <li><a href="#">Ocio y tiempo libre</a></li>
-                    <li><a href="#">Supermercado</a></li>
-                    <li><a href="#">Electrónica</a></li>
+                    <li><a href="#">Dispositivos móviles</a></li>
+                    <li><a href="#">Portátiles</a></li>
+                    <li><a href="#">Consolas</a></li>
+                    <li><a href="#">Videojuegos</a></li>
+                    <li><a href="#">Dispositivos de audio</a></li>
+                    <li><a href="#">Smartwatch</a></li>
+                    <li><a href="#">Realidad Virtual</a></li>
                 </ul>
             </nav>
         </div>
@@ -63,10 +65,6 @@
                     <h4>Filtrar rápido</h4>
                     <input type="checkbox"> Tienda oficial <br>
                     <input type="checkbox"> Envío gratis aplicable
-                </div>
-                <div class="filter-group">
-                    <h4>Categoría</h4>
-                    <p>Móviles y tablets</p>
                 </div>
                 <div class="filter-group">
                     <h4>Marca</h4>
@@ -87,92 +85,98 @@
         </aside>
 
         <div class="productos">
+            <div id="ventana-emergente" class="ventana-emergente">
+                <div class="ventana-emergente-contenido">
+                    <span class="cerrar" onclick="cerrarVentanaEmergente()">&times;</span>
+                    <iframe src="/paginas/info-product.html" width="100%" height="100%" style="border:none;"></iframe>
+                </div>
+            </div>
+
+            
             <div class="producto">
-                <img src="img/tel1.jpg" alt="Alcatel">
-                <p>Teléfono móvil Alcatel 2053D Negro Libre</p>
+                <figure>
+                    <img src="img/tel1.jpg" alt="Alcatel">
+                </figure>
+                <div class="info-producto">
+                    <h3>Teléfono móvil Alcatel 2053D Negro Libre</h3>
                 <p class="price">25,20€</p>
-            </div>
-            <div class="producto">
-                <img src="img/consol1.jpg" alt="Meizu">
-                <p>Meizu M3S - Smartphone Libre</p>
-                <p class="price">142,57€</p>
-            </div>
-            <div class="producto">
-                <img src="img/consol2.jpg" alt="Lenovo Moto Z">
-                <p>Lenovo Moto Z Smartphone</p>
-                <p class="price">321,08€</p>
-            </div>
-            <div class="producto">
-                <img src="img/pc1.jpg" alt="Huawei P10">
-                <p>Smartphone HUAWEI P10 Lite 5.2'' 64GB</p>
-                <p class="price">434,05€</p>
+                </div>
             </div>
 
             <div class="producto">
-                <img src="img/ord1.jpg" alt="Alcatel">
-                <p>Teléfono móvil Alcatel 2053D Negro Libre</p>
+                <figure>
+                    <img src="img/ord1.jpg" alt="Alcatel">
+                </figure>
+                <div class="info-producto">
+                    <h3>Teléfono móvil Alcatel 2053D Negro Libre</h3>
                 <p class="price">25,20€</p>
-            </div>
-            <div class="producto">
-                <img src="img/tel2.jpg" alt="Meizu">
-                <p>Meizu M3S - Smartphone Libre</p>
-                <p class="price">142,57€</p>
-            </div>
-            <div class="producto">
-                <img src="moto-phone.jpg" alt="Lenovo Moto Z">
-                <p>Lenovo Moto Z Smartphone</p>
-                <p class="price">321,08€</p>
-            </div>
-            <div class="producto">
-                <img src="huawei-phone.jpg" alt="Huawei P10">
-                <p>Smartphone HUAWEI P10 Lite 5.2'' 64GB</p>
-                <p class="price">434,05€</p>
+                </div>
             </div>
 
             <div class="producto">
-                <img src="alcatel-phone.jpg" alt="Alcatel">
-                <p>Teléfono móvil Alcatel 2053D Negro Libre</p>
+                <figure>
+                    <img src="img/pc1.jpg" alt="Alcatel">
+                </figure>
+                <div class="info-producto">
+                    <h3>Teléfono móvil Alcatel 2053D Negro Libre</h3>
                 <p class="price">25,20€</p>
-            </div>
-            <div class="producto">
-                <img src="meizu-phone.jpg" alt="Meizu">
-                <p>Meizu M3S - Smartphone Libre</p>
-                <p class="price">142,57€</p>
-            </div>
-            <div class="producto">
-                <img src="moto-phone.jpg" alt="Lenovo Moto Z">
-                <p>Lenovo Moto Z Smartphone</p>
-                <p class="price">321,08€</p>
-            </div>
-            <div class="producto">
-                <img src="huawei-phone.jpg" alt="Huawei P10">
-                <p>Smartphone HUAWEI P10 Lite 5.2'' 64GB</p>
-                <p class="price">434,05€</p>
+                </div>
             </div>
 
             <div class="producto">
-                <img src="alcatel-phone.jpg" alt="Alcatel">
-                <p>Teléfono móvil Alcatel 2053D Negro Libre</p>
+                <figure>
+                    <img src="img/tel2.jpg" alt="Alcatel">
+                </figure>
+                <div class="info-producto">
+                    <h3>Teléfono móvil Alcatel 2053D Negro Libre</h3>
                 <p class="price">25,20€</p>
+                </div>
             </div>
+
             <div class="producto">
-                <img src="meizu-phone.jpg" alt="Meizu">
-                <p>Meizu M3S - Smartphone Libre</p>
-                <p class="price">142,57€</p>
+                <figure>
+                    <img src="img/consol1.jpg" alt="Alcatel">
+                </figure>
+                <div class="info-producto">
+                    <h3>Teléfono móvil Alcatel 2053D Negro Libre</h3>
+                <p class="price">25,20€</p>
+                </div>
             </div>
+
             <div class="producto">
-                <img src="moto-phone.jpg" alt="Lenovo Moto Z">
-                <p>Lenovo Moto Z Smartphone</p>
-                <p class="price">321,08€</p>
+                <figure>
+                    <img src="img/consol4.jpg" alt="Alcatel">
+                </figure>
+                <div class="info-producto">
+                    <h3>Teléfono móvil Alcatel 2053D Negro Libre</h3>
+                <p class="price">25,20€</p>
+                </div>
             </div>
+
             <div class="producto">
-                <img src="huawei-phone.jpg" alt="Huawei P10">
-                <p>Smartphone HUAWEI P10 Lite 5.2'' 64GB</p>
-                <p class="price">434,05€</p>
+                <figure>
+                    <img src="img/consol2.jpg" alt="Alcatel">
+                </figure>
+                <div class="info-producto">
+                    <h3>Teléfono móvil Alcatel 2053D Negro Libre</h3>
+                <p class="price">25,20€</p>
+                </div>
             </div>
-            <!-- Más productos -->
+
+            <div class="producto">
+                <figure>
+                    <img src="img/consol3.jpg" alt="Alcatel">
+                </figure>
+                <div class="info-producto">
+                    <h3>Teléfono móvil Alcatel 2053D Negro Libre</h3>
+                <p class="price">25,20€</p>
+                </div>
+            </div>
+            
         </div>
     </section>
+
+    <script src="/js/scripts.js"></script>
 </body>
 
 </html>
