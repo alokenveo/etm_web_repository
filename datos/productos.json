@@ -1,0 +1,58 @@
+{
+    "productos": [
+        {
+            "nombre": "Teléfono móvil Alcatel 2053D Negro Libre",
+            "precio": "25,20",
+            "imagen": "img/tel1.jpg",
+            "categoria": "móvil"
+        },
+        {
+            "nombre": "Ordenador Alcatel",
+            "precio": "350,00",
+            "imagen": "img/ord1.jpg",
+            "categoria": "pc"
+        },
+        {
+            "nombre": "PC Gaming",
+            "precio": "999,00",
+            "imagen": "img/pc1.jpg",
+            "categoria": "pc"
+        },
+        {
+            "nombre": "Teléfono móvil Alcatel 2053D Negro Libre",
+            "precio": "25,20",
+            "imagen": "img/tel2.jpg",
+            "categoria": "móvil"
+        },
+        {
+            "nombre": "Consola Alcatel",
+            "precio": "300,00",
+            "imagen": "img/consol1.jpg",
+            "categoria": "consola"
+        },
+        {
+            "nombre": "Consola XYZ",
+            "precio": "299,00",
+            "imagen": "img/consol4.jpg",
+            "categoria": "consola"
+        },
+        {
+            "nombre": "Consola 2K",
+            "precio": "280,00",
+            "imagen": "img/consol2.jpg",
+            "categoria": "consola"
+        },
+        {
+            "nombre": "Consola Retro",
+            "precio": "120,00",
+            "imagen": "img/consol3.jpg",
+            "categoria": "consola"
+        },
+        {
+            "nombre": "Telefono",
+            "precio": "150,00",
+            "imagen": "img/tel3.jpg",
+            "categoria": "móvil"
+        }
+    ]
+}
