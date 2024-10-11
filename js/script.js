@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
 //FUNCIONES DE LOS EVENTOS
 function abrirVentanaEmergente() {
     document.getElementById('ventana-emergente').style.display = 'block';
@@ -12,7 +13,6 @@ function abrirVentanaEmergente() {
 function cerrarVentanaEmergente() {
     document.getElementById('ventana-emergente').style.display = 'none';
 }
-
 
 
 // Función para cargar los productos en el contenedor
@@ -35,6 +35,9 @@ function cargarProductos() {
                 // Crear un div para cada producto
                 const divProducto = document.createElement('div');
                 divProducto.classList.add('producto');
+                divProducto.classList.add('col-md-4');
+                divProducto.classList.add('col-sm-6');
+                divProducto.classList.add('col-lg-3');
 
                 // Crear el contenido HTML para el producto
                 divProducto.innerHTML = `

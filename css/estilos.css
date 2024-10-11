@@ -14,12 +14,12 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-.header-contenedor-principal{
+.header-contenedor-principal {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +27,7 @@ a{
 }
 
 
-.logo-pagina{
+.logo-pagina {
     display: flex;
     align-items: center;
 }
@@ -35,27 +35,30 @@ a{
 
 .logo-pagina h1 {
     margin-top: 15px;
-    margin-right: 10px; /* Ajusta el espacio entre el h1 y la imagen según sea necesario */
+    margin-right: 10px;
+    /* Ajusta el espacio entre el h1 y la imagen según sea necesario */
     font-size: 25px;
 }
 
 .logo-pagina img {
-    max-height: 60px; /* Ajusta la altura de la imagen según sea necesario */
+    max-height: 60px;
+    /* Ajusta la altura de la imagen según sea necesario */
 }
 
-.searcher{
+.buscador {
     height: 20px;
-    width: 600px;
+    width: 100%;
+    max-width: 550px;
     align-items: center;
 }
 
-.searcher-content{
+.buscador-content {
     height: 100%;
     width: 100%;
     align-items: center;
 }
 
-.block-searcher {
+.block-buscador {
     border-radius: 20px;
     border-style: solid;
     border-width: 2px;
@@ -66,12 +69,15 @@ a{
     background-color: #fff;
 
     width: 100%;
-    max-width: 100%; /* Ajusta el ancho máximo según sea necesario */
-    height: 100%; /* Ajusta la altura según sea necesario */
+    max-width: 100%;
+    /* Ajusta el ancho máximo según sea necesario */
+    height: 100%;
+    /* Ajusta la altura según sea necesario */
     overflow: hidden;
     align-items: center;
 }
-.block-searcher input {
+
+.block-buscador input {
     flex: 1;
     border: none;
     outline: none;
@@ -82,7 +88,7 @@ a{
     margin-left: 10px;
 }
 
-.block-searcher button {
+.block-buscador button {
     padding: 0px 20px;
     background-color: #333;
     color: white;
@@ -94,25 +100,30 @@ a{
 }
 
 
-.rigthHeader{
+.derHeader {
     display: flex;
     align-items: center;
-    
+    position: relative;
+
 }
 
-.iconos-header{
+.iconos-header {
     margin-left: 10px;
 }
 
-.iconos-header:hover{
+.iconos-header:hover {
     cursor: pointer;
 }
 
 .iconos-rigth-header {
-    width: 20px; /* Ajusta el tamaño según sea necesario */
-    height: 20px; /* Ajusta el tamaño según sea necesario */
-    stroke: currentColor; /* Usa el color actual del texto */
-    fill: none; /* Asegúrate de que el relleno esté configurado correctamente */
+    width: 20px;
+    /* Ajusta el tamaño según sea necesario */
+    height: 20px;
+    /* Ajusta el tamaño según sea necesario */
+    stroke: currentColor;
+    /* Usa el color actual del texto */
+    fill: none;
+    /* Asegúrate de que el relleno esté configurado correctamente */
     padding: 10px;
     border-radius: 50%;
     border-style: solid;
@@ -120,7 +131,27 @@ a{
     border-color: #333;
 }
 
-nav ul {
+.count-products{
+    position: absolute;
+    top: 53%;
+    right: 31%;
+
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#contador-productos{
+    font-size: 12px;
+}
+
+.menu-header ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -136,18 +167,29 @@ nav ul li a {
     color: #333;
 }
 
-.content {
+/* Botón del menú hamburguesa */
+#boton-hamburguesa {
+    margin-right: 40px;
+    display: block;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.contenidos {
     display: flex;
     margin: 20px;
 }
 
-.sidebar {
+.barra-filtro {
     width: 20%;
     padding: 10px;
     border-right: 1px solid #ddd;
 }
 
-.sidebar h3, .sidebar h4 {
+.barra-filtro h3,
+.barra-filtro h4 {
     margin-top: 0;
 }
 
@@ -155,7 +197,7 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
-.productos{
+.productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -171,11 +213,11 @@ nav ul li a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.producto:hover{
+.producto:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.producto:hover img{
+.producto:hover img {
     transform: scale(1.2);
 }
 
@@ -191,7 +233,9 @@ nav ul li a {
 }
 
 /* Botones y formularios */
-input[type="checkbox"], input[type="number"], input[type="text"] {
+input[type="checkbox"],
+input[type="number"],
+input[type="text"] {
     margin-bottom: 10px;
 }
 
@@ -206,24 +250,36 @@ button {
 
 /* Estilos para la ventana emergente */
 .ventana-emergente {
-    display: none; /* Oculta la ventana por defecto */
-    position: fixed; /* Fija la ventana en la pantalla */
-    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    display: none;
+    /* Oculta la ventana por defecto */
+    position: fixed;
+    /* Fija la ventana en la pantalla */
+    z-index: 1;
+    /* Asegura que la ventana esté por encima de otros elementos */
     left: 0;
     top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    overflow: auto; /* Habilita el scroll si es necesario */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Altura completa */
+    overflow: auto;
+    /* Habilita el scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
 }
 
 .ventana-emergente-contenido {
     background-color: #fff;
-    margin: 15% auto; /* Centra la ventana */
+    margin: 15% auto;
+    /* Centra la ventana */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Ajusta el ancho según sea necesario */
-    max-width: 600px; /* Ancho máximo */
+    width: 80%;
+    height: 80%;
+    /* Ajusta el ancho según sea necesario */
+    max-width: 500px;
+    max-height: 1000px;
+    /* Ancho máximo */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
@@ -240,4 +296,20 @@ button {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Estilos del pie de página */
+footer {
+    display: flex;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50% -50%);
+    gap: 38px
+}
+#footerFinal {
+    display: flex; /* Modelo de caja flexible */
+    justify-content: center; /* Alineación centrada horizontal */
+    align-items: center; /* Alineación centrada vertical */
+    font-size: small; /* Tamaño de fuente pequeño */
+    font-family: 'Times New Roman', Times, serif; /* Fuente secundaria */
 }
