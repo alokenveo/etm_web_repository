@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     cargarProductos();
 });
 
+document.getElementById('boton-hamburguesa').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+});
 
 
 //FUNCIONES DE LOS EVENTOS

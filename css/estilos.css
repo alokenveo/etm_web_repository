@@ -12,6 +12,13 @@ header {
     padding: 5px 20px;
     background-color: #f3f3f3;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    /*
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    */
 }
 
 a {
@@ -24,6 +31,7 @@ a {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 
@@ -47,7 +55,7 @@ a {
 
 .buscador {
     height: 20px;
-    width: 100%;
+    width: 70%;
     max-width: 550px;
     align-items: center;
 }
@@ -104,11 +112,11 @@ a {
     display: flex;
     align-items: center;
     position: relative;
-
 }
 
 .iconos-header {
     margin-left: 10px;
+    display: inline-block;
 }
 
 .iconos-header:hover {
@@ -131,7 +139,7 @@ a {
     border-color: #333;
 }
 
-.count-products{
+.count-products {
     position: absolute;
     top: 53%;
     right: 31%;
@@ -147,45 +155,104 @@ a {
     border-radius: 50%;
 }
 
-#contador-productos{
+#contador-productos {
     font-size: 12px;
 }
+
 
 .menu-header ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+.menu-user {
+    display: none;
+    /* Ocultar el menú por defecto */
+    position: absolute;
+    top: 40px;
+    /* Ajusta esto dependiendo de dónde quieras que aparezca el menú */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding-inline-start: 0;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.menu-user li {
+    list-style: none;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.menu-user li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.menu-user li:hover {
+    background-color: #f2f2f2;
+}
+
+/* Mostrar el menú al hacer hover sobre el div de usuario */
+#user:hover .menu-user {
+    display: block;
 }
 
 nav ul li {
     margin-left: 20px;
 }
 
+
 nav ul li a {
     text-decoration: none;
     color: #333;
 }
 
+
 /* Botón del menú hamburguesa */
 #boton-hamburguesa {
     margin-right: 40px;
-    display: block;
     cursor: pointer;
     display: none;
 }
 
 
 
+
+/* Contenido principal*/
+
 .contenidos {
     display: flex;
     margin: 20px;
 }
 
+@media screen and (max-width: 800px) {
+    aside {
+        width: 100%;
+    }
+
+    .productos {
+        width: 100%;
+    }
+
+}
+
 .barra-filtro {
+    min-width: 225px;
     width: 20%;
     padding: 10px;
     border-right: 1px solid #ddd;
+    box-sizing: border-box;
 }
 
 .barra-filtro h3,
@@ -201,12 +268,13 @@ nav ul li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 75%;
+    width: 80%;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .producto {
-    width: 23%;
+    width: 24%;
     margin-bottom: 20px;
     text-align: center;
     border-radius: 10px;
@@ -250,38 +318,35 @@ button {
 
 /* Estilos para la ventana emergente */
 .ventana-emergente {
-    display: none;
-    /* Oculta la ventana por defecto */
-    position: fixed;
-    /* Fija la ventana en la pantalla */
-    z-index: 1;
-    /* Asegura que la ventana esté por encima de otros elementos */
+    display: none; /* Oculta la ventana por defecto */
+    position: fixed; /* Fija la ventana en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
     left: 0;
     top: 0;
-    width: 100%;
-    /* Ancho completo */
-    height: 100%;
-    /* Altura completa */
-    overflow: auto;
-    /* Habilita el scroll si es necesario */
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Fondo semitransparente */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Habilita el scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
 }
 
 .ventana-emergente-contenido {
     background-color: #fff;
-    margin: 15% auto;
-    /* Centra la ventana */
+    margin: 10% auto; /* Espacio superior para centrar verticalmente */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    height: 80%;
-    /* Ajusta el ancho según sea necesario */
-    max-width: 500px;
-    max-height: 1000px;
-    /* Ancho máximo */
+    width: 90%; /* Ancho adaptable */
+    height: 80%; /* Altura adaptable */
+    max-width: 600px; /* Ancho máximo */
+    max-height: 90%; /* Altura máxima */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    position: relative; /* Para manejar el cierre */
+}
+
+.iframe-contenido {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    border: none; /* Sin borde */
 }
 
 .cerrar {
@@ -298,6 +363,7 @@ button {
     cursor: pointer;
 }
 
+
 /* Estilos del pie de página */
 footer {
     display: flex;
@@ -306,10 +372,16 @@ footer {
     transform: translateX(-50% -50%);
     gap: 38px
 }
+
 #footerFinal {
-    display: flex; /* Modelo de caja flexible */
-    justify-content: center; /* Alineación centrada horizontal */
-    align-items: center; /* Alineación centrada vertical */
-    font-size: small; /* Tamaño de fuente pequeño */
-    font-family: 'Times New Roman', Times, serif; /* Fuente secundaria */
+    display: flex;
+    /* Modelo de caja flexible */
+    justify-content: center;
+    /* Alineación centrada horizontal */
+    align-items: center;
+    /* Alineación centrada vertical */
+    font-size: small;
+    /* Tamaño de fuente pequeño */
+    font-family: 'Times New Roman', Times, serif;
+    /* Fuente secundaria */
 }

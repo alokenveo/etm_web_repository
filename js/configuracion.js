@@ -29,10 +29,25 @@ formProducto.addEventListener('submit', function(event) {
         imagen: previewImg.src // Obtener la imagen en base64
     };
 
+    console.log("Guardando producto...");
+
     // Guardar el producto en localStorage
     let productosGuardados = JSON.parse(localStorage.getItem('productos')) || [];
     productosGuardados.push(nuevoProducto);
     localStorage.setItem('productos', JSON.stringify(productosGuardados));
+
+    console.log("Producto guardado en localStorage:", nuevoProducto);
+
+    // Guardar el producto en el archivo JSON
+    fetch('/datos/productos.json', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ producto: nuevoProducto })
+    })
+
+    console.log("Producto guardado en el archivo JSON:", nuevoProducto);
 
     // Reiniciar el formulario
     formProducto.reset();
