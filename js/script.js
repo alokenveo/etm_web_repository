@@ -34,9 +34,12 @@ function cargarProductos() {
             productos.forEach(producto => {
                 // Crear un div para cada producto
                 const divProducto = document.createElement('div');
+                divProducto.classList.add('mx-2');
+
                 divProducto.classList.add('producto');
-                divProducto.classList.add('col-md-4');
-                divProducto.classList.add('col-sm-6');
+                divProducto.classList.add('col-md-3');
+                divProducto.classList.add('col-sm-4');
+                divProducto.classList.add('mx-sm-5');
                 divProducto.classList.add('col-lg-3');
 
                 // Crear el contenido HTML para el producto
