@@ -9,22 +9,59 @@
     <link rel="stylesheet" href="/css/estilos_login.css">
 </head>
 
-<body>
-    <div class="container-fluid">
-        <form class="form-group">
-            
-            <div class="mb-3">
-                <h2 class="text-center">Login</h2>
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+<body class="bg-info d-flex justify-content-center align-items-center vh-100">
+    <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 25rem;">
+        <div class="d-flex justify-content-center">
+            <img src="/img/iconos/login_user.png" alt="Login Icon">
+        </div>
+        <div class="text-center fs-1 fw-bold">Login</div>
 
-                <label for="exampleFormControlInput1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="password">
-
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <!--Input de Username-->
+        <div class="input-group mt-4">
+            <div class="input-group-text bg-info">
+                <img src="/img/iconos/user.png" alt="">
             </div>
-        </form>
+            <input type="text" placeholder="Nombre de usuario" class="form-control bg-light">
+        </div>
+
+        <!--Input de Contraseña-->
+        <div class="input-group mt-1">
+            <div class="input-group-text bg-info">
+                <img src="/img/iconos/password.png" alt="">
+            </div>
+            <input type="password" placeholder="Contraseña" class="form-control bg-light">
+        </div>
+
+        <!--Checkbox de Recuerdame y Olvidaste tu contraseña-->
+        <div class="d-flex justify-content-around mt-1">
+            <div class="d-flex align-items-center gap-1">
+                <input class="form-check-input" type="checkbox">
+                <div class="pt-1" style="font-size: 0.9rem;">Recuerdáme</div>
+            </div>
+            <div class="pt-1">
+                <a class="text-decoration-none text-info fst-italic fw-semibold" href="#" style="font-size: 0.9rem;">¿Olvidaste tu contraseña?</a>
+            </div>
+        </div>
+
+        <!--Boton de Login-->
+        <div class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm">Login</div>
+        <div class="d-flex gap-1 justify-content-center mt-1">
+            <div>¿No tiene una cuenta?</div>
+            <a href="#" class="text-decoration-none text-info fw-semibold">Regístrate</a>
+        </div>
+        
+        <!--Separador-->
+        <div class="p-3">
+            <div class="border-bottom text-center" style="height: 0.9rem;">
+                <span class="bg-white px-2">o</span>
+            </div>
+        </div>
+
+        <!--Boton de Google-->
+        <div class="btn d-flex gap-2 justify-content-center border mt-3 shadow-sm">
+            <img src="/img/iconos/google.png" alt="Google-icon" style="height: 1.6rem;">
+            <div class="fw-semibold ">Continuar con Google</div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

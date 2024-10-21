@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    cargarProductos();
+    cargarProductos1();
+    //cargarProductos2();
 });
 
 document.getElementById('boton-hamburguesa').addEventListener('click', function() {
@@ -20,7 +21,34 @@ function cerrarVentanaEmergente() {
 
 
 // Función para cargar los productos en el contenedor
-function cargarProductos() {
+function cargarProductos1() {
+    fetch('/cargar_productos.php')
+        .then(response => response.json())
+        .then(data => {
+            const productosContainer = document.querySelector('.productos');
+            productosContainer.innerHTML = ''; // Limpiar el contenedor de productos
+
+            data.forEach(producto => {
+                // Crear el HTML de cada producto
+                const productoHTML = `
+                    <div class="producto">
+                        <img src="${producto.imagen}" alt="${producto.nombre}">
+                        <h3>${producto.nombre}</h3>
+                        <p>${producto.descripcion}</p>
+                        <p>Precio: ${producto.precio} €</p>
+                    </div>
+                `;
+                productosContainer.innerHTML += productoHTML;
+            });
+        })
+        .catch(error => {
+            console.error('Error al cargar los productos:', error);
+        });
+}
+
+
+
+function cargarProductos2() {
     const contenedor = document.querySelector('.productos');
     contenedor.innerHTML = '';
 
@@ -61,3 +89,4 @@ function cargarProductos() {
             console.error('Error:', error);
         });
 }
+
