@@ -1,0 +1,15 @@
+/* Header */
+.titulo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    background-color: #e0e7ff;
+    padding: 2rem 1rem;
+}
+.hero h2 {
+    color: #0044cc;
+}

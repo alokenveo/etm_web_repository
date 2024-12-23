@@ -1,0 +1,32 @@
+[
+    {
+        "imagen": "/images/tv.jpg",
+        "titulo": "TV",
+        "descripcion": "Televisor de alta definición.",
+        "precio": "499,99€"
+    },
+    {
+        "imagen": "/images/headphones.jpg",
+        "titulo": "Auriculares",
+        "descripcion": "Audífonos con cancelación de ruido.",
+        "precio": "149,99€"
+    },
+    {
+        "imagen": "/images/laptop.jpg",
+        "titulo": "Portátil",
+        "descripcion": "Portátil potente y liviano.",
+        "precio": "999,99€"
+    },
+    {
+        "imagen": "/images/phone1.jpg",
+        "titulo": "Móvil 1",
+        "descripcion": "Smartphone con tecnología avanzada.",
+        "precio": "799,99€"
+    },
+    {
+        "imagen": "/images/phone2.jpg",
+        "titulo": "Móvil 2",
+        "descripcion": "Smartphone con diseño moderno.",
+        "precio": "899,99€"
+    }
+]

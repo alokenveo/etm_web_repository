@@ -28,26 +28,40 @@
     <div id="header"></div>
 
     <main>
-        <section class="hero">
-            <h2>Bienvenido a ETM S.L.</h2>
-            <p>Tu tienda de electrónica de confianza.</p>
-        </section>
-
-        <section class="productos py-4">
+        <section class="producto-detalle py-5" id="producto-detalle">
             <div class="container">
-                <h3 class="text-center mb-4">Nuestros Productos</h3>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="productos-container">
-                    <!-- Los productos se generarán aquí -->
+                <div class="row">
+                    <!-- Imagen del producto -->
+                    <div class="col-md-6 text-center">
+                        <img id="producto-imagen" src="" class="img-fluid rounded" alt="Imagen del producto">
+                    </div>
+                    <!-- Detalle del producto -->
+                    <div class="col-md-6">
+                        <h2 class="mb-4" id="producto-titulo">Título del producto</h2>
+                        <p class="text-muted" id="producto-descripcion">Descripción del producto.</p>
+                        <p><strong>Precio:</strong> <span class="text-primary" id="producto-precio">999.99€</span></p>
+
+                        <!-- Control de cantidad -->
+                        <div class="d-flex align-items-center mt-3">
+                            <button class="btn btn-outline-secondary me-2" id="quitar-btn">-</button>
+                            <span id="cantidad" class="fs-5 mx-3">0</span>
+                            <button class="btn btn-outline-secondary ms-2" id="añadir-btn">+</button>
+                        </div>
+
+                        <!-- Añadir a la compra -->
+                        <button class="btn btn-primary btn-lg mt-4" id="añadir-compra-btn">Añadir a la compra</button>
+                    </div>
                 </div>
             </div>
         </section>
-
     </main>
+
 
     <div id="footer"></div>
 
-    <!-- Enlace de JavaScript-->
-    <script src="/js/script_index.js"></script>
+
+    <!-- Enlaces de JavaScript-->
+    <script src="/js/script_product.js"></script>
     <script src="/js/script_general.js"></script>
 
     <!-- Enlaces de Bootstrap -->
