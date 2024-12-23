@@ -1,7 +1,13 @@
 /* Header */
-.titulo{
+.titulo {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+/* Navbar */
+.navbar-nav .nav-link i {
+    font-size: 1.5rem;
+    margin-right: 5px;
 }
 
 /* Hero */
@@ -10,6 +16,9 @@
     background-color: #e0e7ff;
     padding: 2rem 1rem;
 }
+
 .hero h2 {
     color: #0044cc;
 }
+
+/* Modal de categorías */

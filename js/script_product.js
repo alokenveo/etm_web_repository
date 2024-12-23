@@ -73,9 +73,19 @@ quitarBtn.addEventListener("click", () => {
 });
 
 añadirCompraBtn.addEventListener("click", () => {
+  var cantidad = parseInt(document.getElementById("cantidad").innerText, 10);
   if (cantidad > 0) {
-    alert(`Has añadido ${cantidad} unidades a la compra.`);
-    // Aquí podrías enviar los datos al carrito o guardarlos en localStorage
+    var productoTitulo = document.getElementById("producto-titulo").innerText;
+    var productoPrecio = parseFloat(
+      document
+        .getElementById("producto-precio")
+        .innerText.replace("€", "")
+        .replace(",", ".")
+    );
+
+    anadirAlCarrito(productoTitulo, productoPrecio, cantidad);
+
+    window.location.href = "/index.html";
   } else {
     alert("Por favor, selecciona al menos un producto.");
   }

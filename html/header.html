@@ -15,23 +15,108 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <!-- Buscador centrado -->
             <form class="d-flex mx-auto" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar productos..."
-                    aria-label="Buscar">
+                <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar">
                 <button class="btn btn-outline-light" type="submit">Buscar</button>
             </form>
 
             <!-- Opciones del menú -->
             <ul class="navbar-nav ms-auto">
+                <!-- Botón para seleccionar categorías -->
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
+                    <button class="btn btn-outline-primary nav-link" data-bs-toggle="modal"
+                        data-bs-target="#categoriasModal">Seleccionar categorías</button>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="productos.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="formulario.html">Comprar</a>
+
+                <!-- Icono del carrito con menú desplegable -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="carritoDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-cart"></i>
+                    </a>
+
+                    <!-- Contenido del carrito -->
+                    <ul class="dropdown-menu" aria-labelledby="carritoDropdown"
+                        style="width: 300px; transform: translateX(-120px);">
+                        <li>
+                            <div class="p-3" id="carritoContenido">
+                                <!-- Aquí se añadirán dinámicamente los productos -->
+                                <p class="text-muted text-center">El carrito está vacío</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown-divider"></div>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between align-items-center px-3">
+                                <strong>Total:</strong>
+                                <span id="totalCarrito">€0.00</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown-divider"></div>
+                        </li>
+                        <li class="text-center">
+                            <div class="d-flex justify-content-between px-3">
+                                <!-- Botón de Vaciar carrito con icono -->
+                                <button class="btn btn-danger btn-sm" onclick="vaciarCarrito()">
+                                    <i class="bi bi-cart-x"></i> <!-- Icono de eliminar carrito -->
+                                </button>
+
+                                <!-- Botón de Finalizar compra -->
+                                <button class="btn btn-primary btn-sm" onclick="finalizarCompra()">Finalizar
+                                    compra</button>
+                            </div>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
+<!-- Modal para las categorías -->
+<div class="modal fade" id="categoriasModal" tabindex="-1" aria-labelledby="categoriasModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" style="margin-top: 5%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="categoriasModalLabel">Seleccionar categorías</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Cerrar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="categoriasForm">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="moviles" id="categoria1">
+                        <label class="form-check-label" for="categoria1">Dispositivos móviles</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="portatiles" id="categoria2">
+                        <label class="form-check-label" for="categoria2">Portátiles</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="consolas" id="categoria3">
+                        <label class="form-check-label" for="categoria3">Consolas</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="audio" id="categoria4">
+                        <label class="form-check-label" for="categoria4">Dispositivos de audio</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="relojes" id="categoria5">
+                        <label class="form-check-label" for="categoria5">Relojes inteligentes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="virtual" id="categoria6">
+                        <label class="form-check-label" for="categoria6">Equipos de realidad virtual</label>
+                    </div>
+                    <!-- Añade más opciones según las categorías necesarias -->
+                </form>
+            </div>
+            <div class="modal-footer mt-5">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="aplicarCategorias()">Aplicar</button>
+            </div>
+        </div>
+    </div>
+</div>

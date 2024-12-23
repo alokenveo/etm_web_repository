@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Resumen de Compra</h2>
+
+        <div class="d-flex justify-content-between">
+            <!-- Resumen de la compra a la izquierda -->
+            <div id="carritoResumen" class="flex-fill" style="max-width: 45%;"></div>
+
+            <!-- Formulario de datos personales y comerciales a la derecha -->
+            <div class="flex-fill" style="max-width: 45%;">
+                <h3>Datos Personales</h3>
+                <form id="datosCliente">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="direccion" required>
+                    </div>
+
+                    <h3>Datos Comerciales</h3>
+                    <div class="mb-3">
+                        <label for="modoPago" class="form-label">Modo de Pago</label>
+                        <select class="form-select" id="modoPago" required>
+                            <option value="tarjeta">Tarjeta</option>
+                            <option value="paypal">PayPal</option>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="tarjetaDiv">
+                        <label for="tarjeta" class="form-label">Número de Tarjeta</label>
+                        <input type="text" class="form-control" id="tarjeta" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-success mt-4">Confirmar Compra</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal de Confirmación -->
+        <div id="modalConfirmacion" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Compra Realizada</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>¡Gracias por su compra! Su transacción ha sido procesada.</p>
+                        <i class="text-success">✔</i> Compra completada con éxito.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 Company, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#twitter" />
+                    </svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#instagram" />
+                    </svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#facebook" />
+                    </svg></a></li>
+        </ul>
+    </footer>
+
+    <script src="/js/script_compra.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
