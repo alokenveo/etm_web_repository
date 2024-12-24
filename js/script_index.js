@@ -21,7 +21,7 @@ function mostrarProductos(productos) {
 
   if (productos.length === 0) {
     contenedor.innerHTML =
-      '<p class="text-muted text-center">No hay productos disponibles para esta categoría.</p>';
+      '<p class="text-muted text-center w-100">No hay productos disponibles para esta categoría.</p>';
     return;
   }
 

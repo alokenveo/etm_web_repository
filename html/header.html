@@ -14,10 +14,14 @@
         <!-- Contenido colapsable -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <!-- Buscador centrado -->
-            <form class="d-flex mx-auto" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar">
-                <button class="btn btn-outline-light" type="submit">Buscar</button>
-            </form>
+            <div class="input-group mx-5">
+                <input type="text" class="form-control" placeholder="Buscar productos..." id="buscador"
+                    aria-label="Buscar productos" onkeydown="if (event.key === 'Enter') buscarProductos();" />
+                <button class="btn btn-primary" type="button" id="buscarBtn" onclick="buscarProductos()">
+                    Buscar
+                </button>
+            </div>
+
 
             <!-- Opciones del menú -->
             <ul class="navbar-nav ms-auto">
@@ -86,36 +90,37 @@
             </div>
             <div class="modal-body">
                 <form id="categoriasForm">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="moviles" id="categoria1">
+                    <div class="form-check py-1">
+                        <input class="form-check-input" type="checkbox" value="moviles" id="categoria1"
+                            onchange="aplicarCategorias()">
                         <label class="form-check-label" for="categoria1">Dispositivos móviles</label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="portatiles" id="categoria2">
+                    <div class="form-check py-1">
+                        <input class="form-check-input" type="checkbox" value="portatiles" id="categoria2"
+                            onchange="aplicarCategorias()">
                         <label class="form-check-label" for="categoria2">Portátiles</label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="consolas" id="categoria3">
+                    <div class="form-check py-1">
+                        <input class="form-check-input" type="checkbox" value="consolas" id="categoria3"
+                            onchange="aplicarCategorias()">
                         <label class="form-check-label" for="categoria3">Consolas</label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="audio" id="categoria4">
+                    <div class="form-check py-1">
+                        <input class="form-check-input" type="checkbox" value="audio" id="categoria4"
+                            onchange="aplicarCategorias()">
                         <label class="form-check-label" for="categoria4">Dispositivos de audio</label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="relojes" id="categoria5">
+                    <div class="form-check py-1">
+                        <input class="form-check-input" type="checkbox" value="relojes" id="categoria5"
+                            onchange="aplicarCategorias()">
                         <label class="form-check-label" for="categoria5">Relojes inteligentes</label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="virtual" id="categoria6">
+                    <div class="form-check py-1">
+                        <input class="form-check-input" type="checkbox" value="virtual" id="categoria6"
+                            onchange="aplicarCategorias()">
                         <label class="form-check-label" for="categoria6">Equipos de realidad virtual</label>
                     </div>
-                    <!-- Añade más opciones según las categorías necesarias -->
                 </form>
-            </div>
-            <div class="modal-footer mt-5">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary" onclick="aplicarCategorias()">Aplicar</button>
             </div>
         </div>
     </div>

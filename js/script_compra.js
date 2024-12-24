@@ -13,7 +13,7 @@ function mostrarResumenCarrito() {
   carrito.forEach(item => {
     total += item.precio * item.cantidad;
     carritoResumen.innerHTML += `
-      <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-between py-1">
         <span>${item.producto} (x${item.cantidad})</span>
         <span>€${(item.precio * item.cantidad).toFixed(2)}</span>
       </div>

@@ -1,30 +1,212 @@
 [
     {
-        "imagen": "/images/headphones.jpg",
-        "titulo": "Auriculares",
-        "descripcion": "Audífonos con cancelación de ruido.",
-        "precio": "149,99€",
-        "categoria":"audio"
+        "imagen": "/images/iphone16promax.jpg",
+        "titulo": "iPhone 16 Pro Max",
+        "descripcion": "El último modelo de Apple con pantalla OLED de 6.7 pulgadas, chip A18 Bionic y cámara principal de 48 MP.",
+        "precio": "1399€",
+        "categoria": "moviles"
     },
     {
-        "imagen": "/images/laptop.jpg",
-        "titulo": "Portátil",
-        "descripcion": "Portátil potente y liviano.",
-        "precio": "999,99€",
-        "categoria":"portatiles"
+        "imagen": "/images/samsungs24ultra.jpg",
+        "titulo": "Samsung Galaxy S24 Ultra",
+        "descripcion": "Pantalla Dynamic AMOLED de 6.8 pulgadas, procesador Exynos 2400 y cámara principal de 200 MP.",
+        "precio": "1299€",
+        "categoria": "moviles"
     },
     {
-        "imagen": "/images/phone1.jpg",
-        "titulo": "Móvil 1",
-        "descripcion": "Smartphone con tecnología avanzada.",
-        "precio": "799,99€",
-        "categoria":"moviles"
+        "imagen": "/images/pixel9pro.jpg",
+        "titulo": "Google Pixel 9 Pro",
+        "descripcion": "Cámara de 50 MP con inteligencia artificial, pantalla OLED de 6.7 pulgadas y procesador Google Tensor G3.",
+        "precio": "1099€",
+        "categoria": "moviles"
     },
     {
-        "imagen": "/images/phone2.jpg",
-        "titulo": "Móvil 2",
-        "descripcion": "Smartphone con diseño moderno.",
-        "precio": "899,99€",
-        "categoria":"moviles"
+        "imagen": "/images/oneplus12.jpg",
+        "titulo": "OnePlus 12",
+        "descripcion": "Pantalla AMOLED de 6.7 pulgadas, procesador Snapdragon 8 Gen 3 y cámara principal de 50 MP.",
+        "precio": "899€",
+        "categoria": "moviles"
+    },
+    {
+        "imagen": "/images/pixel8a.jpg",
+        "titulo": "Google Pixel 8a",
+        "descripcion": "Pantalla OLED de 6.1 pulgadas, procesador Google Tensor G2 y cámara principal de 12.2 MP.",
+        "precio": "499€",
+        "categoria": "moviles"
+    },
+    {
+        "imagen": "/images/macbookairm3.jpg",
+        "titulo": "Apple MacBook Air M3",
+        "descripcion": "Rendimiento excepcional con el chip M3, pantalla Retina de 13.3 pulgadas y batería de hasta 15 horas.",
+        "precio": "1099€",
+        "categoria": "portatiles"
+    },
+    {
+        "imagen": "/images/dellxps13.jpg",
+        "titulo": "Dell XPS 13 (2024)",
+        "descripcion": "Pantalla InfinityEdge de 13.4 pulgadas, procesador Intel Core i7 de 12ª generación y batería de larga duración.",
+        "precio": "1299€",
+        "categoria": "portatiles"
+    },
+    {
+        "imagen": "/images/asuszenbook14.jpg",
+        "titulo": "Asus Zenbook 14 OLED Touch",
+        "descripcion": "Pantalla OLED táctil de 14 pulgadas, procesador AMD Ryzen 7 y batería de casi 20 horas.",
+        "precio": "1149€",
+        "categoria": "portatiles"
+    },
+    {
+        "imagen": "/images/lenovothinkpadx1.jpg",
+        "titulo": "Lenovo ThinkPad X1 Carbon Gen 12",
+        "descripcion": "Pantalla de 14 pulgadas, procesador Intel Core i7 y características de seguridad avanzadas. Ideal para negocios.",
+        "precio": "1396€",
+        "categoria": "portatiles"
+    },
+    {
+        "imagen": "/images/hpspectrex360.jpg",
+        "titulo": "HP Spectre x360 14",
+        "descripcion": "Portátil convertible con pantalla táctil de 14 pulgadas, procesador Intel Core i7 y diseño elegante.",
+        "precio": "1299€",
+        "categoria": "portatiles"
+    },
+    {
+        "imagen": "/images/playstation5.jpg",
+        "titulo": "Sony PlayStation 5",
+        "descripcion": "Gráficos en 4K con HDR, SSD ultrarrápido y mando DualSense con retroalimentación háptica.",
+        "precio": "499€",
+        "categoria": "consolas"
+    },
+    {
+        "imagen": "/images/xboxseriesx.jpg",
+        "titulo": "Microsoft Xbox Series X",
+        "descripcion": "Consola potente con 12 teraflops, juegos en 4K a 120 FPS y acceso a Xbox Game Pass.",
+        "precio": "499€",
+        "categoria": "consolas"
+    },
+    {
+        "imagen": "/images/nintendoswitcholed.jpg",
+        "titulo": "Nintendo Switch OLED",
+        "descripcion": "Pantalla OLED de 7 pulgadas, colores vivos, y uso híbrido portátil o conectado a la TV.",
+        "precio": "349€",
+        "categoria": "consolas"
+    },
+    {
+        "imagen": "/images/steamdeck.jpg",
+        "titulo": "Steam Deck",
+        "descripcion": "Consola portátil con pantalla de 7 pulgadas, procesador AMD y acceso a juegos de Steam.",
+        "precio": "399€",
+        "categoria": "consolas"
+    },
+    {
+        "imagen": "/images/asusrogalley.jpg",
+        "titulo": "ASUS ROG Ally",
+        "descripcion": "Consola portátil de alto rendimiento con pantalla Full HD, procesador AMD Ryzen Z1 y batería duradera.",
+        "precio": "699€",
+        "categoria": "consolas"
+    },
+    {
+        "imagen": "/images/sonywh1000xm5.jpg",
+        "titulo": "Sony WH-1000XM5",
+        "descripcion": "Auriculares inalámbricos con cancelación de ruido líder, sonido Hi-Res y hasta 30 horas de batería.",
+        "precio": "399€",
+        "categoria": "audio"
+    },
+    {
+        "imagen": "/images/bosequietcomfortearbuds2.jpg",
+        "titulo": "Bose QuietComfort Earbuds II",
+        "descripcion": "Auriculares intrauditivos con cancelación de ruido avanzada y calidad de sonido superior.",
+        "precio": "299€",
+        "categoria": "audio"
+    },
+    {
+        "imagen": "/images/jblcharge5.jpg",
+        "titulo": "JBL Charge 5",
+        "descripcion": "Altavoz Bluetooth portátil con sonido potente, resistencia IP67 y hasta 20 horas de reproducción.",
+        "precio": "179€",
+        "categoria": "audio"
+    },
+    {
+        "imagen": "/images/sennheiserhd660s2.jpg",
+        "titulo": "Sennheiser HD 660S2",
+        "descripcion": "Auriculares abiertos para audiófilos, con sonido detallado y diseño cómodo.",
+        "precio": "499€",
+        "categoria": "audio"
+    },
+    {
+        "imagen": "/images/sonosonegen2.jpg",
+        "titulo": "Sonos One (Gen 2)",
+        "descripcion": "Altavoz inteligente con control por voz, compatible con Alexa y Google Assistant.",
+        "precio": "229€",
+        "categoria": "audio"
+    },
+    {
+        "imagen": "/images/applewatchseries10.jpg",
+        "titulo": "Apple Watch Series 10",
+        "descripcion": "Reloj elegante con pantalla grande, sensor de oxígeno en sangre y detección de apnea del sueño.",
+        "precio": "379€",
+        "categoria": "relojes"
+    },
+    {
+        "imagen": "/images/samsunggalaxywatch7.jpg",
+        "titulo": "Samsung Galaxy Watch 7",
+        "descripcion": "Reloj con seguimiento avanzado de la salud, pantalla AMOLED y batería de larga duración.",
+        "precio": "239€",
+        "categoria": "relojes"
+    },
+    {
+        "imagen": "/images/googlepixelwatch3.jpg",
+        "titulo": "Google Pixel Watch 3",
+        "descripcion": "Diseño elegante con funciones avanzadas de salud, fitness y compatibilidad con Google Assistant.",
+        "precio": "349€",
+        "categoria": "relojes"
+    },
+    {
+        "imagen": "/images/garminvenusq2.jpg",
+        "titulo": "Garmin Venu Sq 2",
+        "descripcion": "Reloj fitness con GPS integrado, pantalla AMOLED y aplicaciones deportivas avanzadas.",
+        "precio": "149€",
+        "categoria": "relojes"
+    },
+    {
+        "imagen": "/images/fitbitversa4.jpg",
+        "titulo": "Fitbit Versa 4",
+        "descripcion": "Ligero y cómodo, con seguimiento de salud completo, monitoreo del sueño y ritmo cardíaco.",
+        "precio": "199€",
+        "categoria": "relojes"
+    },
+    {
+        "imagen": "/images/metaquest3.jpg",
+        "titulo": "Meta Quest 3",
+        "descripcion": "Casco autónomo con resolución alta, cámaras de paso a color y procesador Snapdragon XR2 Gen 2.",
+        "precio": "499€",
+        "categoria": "virtual"
+    },
+    {
+        "imagen": "/images/applevisionpro.jpg",
+        "titulo": "Apple Vision Pro",
+        "descripcion": "Experiencia de realidad mixta con chip M2, pantalla de alta resolución y aplicaciones de productividad.",
+        "precio": "3499€",
+        "categoria": "virtual"
+    },
+    {
+        "imagen": "/images/playstationvr2.jpg",
+        "titulo": "Sony PlayStation VR2",
+        "descripcion": "Casco para PlayStation 5 con gráficos impresionantes y controladores con retroalimentación háptica.",
+        "precio": "599€",
+        "categoria": "virtual"
+    },
+    {
+        "imagen": "/images/valveindex.jpg",
+        "titulo": "Valve Index",
+        "descripcion": "Casco VR de alta gama para PC, con alta resolución, 120 Hz y controladores avanzados.",
+        "precio": "1645€",
+        "categoria": "virtual"
+    },
+    {
+        "imagen": "/images/htcvivepro2.jpg",
+        "titulo": "HTC Vive Pro 2",
+        "descripcion": "Dispositivo con resolución 5K y tasa de refresco de 120 Hz, ideal para juegos y aplicaciones profesionales.",
+        "precio": "1199€",
+        "categoria": "virtual"
     }
 ]

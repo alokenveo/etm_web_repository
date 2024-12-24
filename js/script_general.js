@@ -1,12 +1,11 @@
 //Cargar el header y el footer en todas las páginas
 async function incluirHTML() {
   try {
-    console.log("Cargando header y footer...");
     const header = await fetch("/html/header.html");
     const footer = await fetch("/html/footer.html");
     document.getElementById("header").innerHTML = await header.text();
     document.getElementById("footer").innerHTML = await footer.text();
-    console.log("Header y footer cargados.");
+    console.log("Header y footer cargados");
 
     // Llamar a cargarCarrito después de cargar el contenido
     cargarCarrito();
@@ -44,6 +43,27 @@ function aplicarCategorias() {
   // Cerrar el modal
   const modal = new bootstrap.Modal(document.getElementById("categoriasModal"));
   modal.hide();
+}
+
+function buscarProductos() {
+  const input = document.getElementById("buscador").value.trim();
+
+  // Verificar si hay al menos 3 letras
+  if (input.length < 3) {
+    alert("Por favor, introduce al menos 3 letras para buscar.");
+    return;
+  }
+
+  // Convertir a minúsculas para una búsqueda insensible a mayúsculas
+  const termino = input.toLowerCase();
+
+  // Filtrar productos cuyo título contiene el término de búsqueda
+  const productosFiltrados = window.productos.filter((producto) =>
+    producto.titulo.toLowerCase().includes(termino)
+  );
+
+  // Mostrar los productos filtrados
+  mostrarProductos(productosFiltrados);
 }
 
 /* GESTIÓN DE COMPRA */
